@@ -1,0 +1,29 @@
+﻿<Window x:Class="HotelWPF.RoomSearch"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HotelWPF"
+        mc:Ignorable="d"
+        Title="Регистрацияилибронировние" Height="584" Width="712"
+        WindowStartupLocation ="CenterScreen">
+    <Grid>
+        <Label x:Name="label1"  Height="40" FontSize="20" Content="Выберите категорию номера:" HorizontalAlignment="Left"  Margin="24,80,0,433" />
+        <Label x:Name="label2"  Height="40" FontSize="20" Content="Доступные номера:" HorizontalAlignment="Right"  Margin="0,80,170,433" />
+        <Label x:Name="label3" FontSize="16" Content="Вместимость" HorizontalAlignment="Left"  Margin="24,130,0,370" />
+        <Label x:Name="label4" FontSize="16" Content="Тип" HorizontalAlignment="Left"  Margin="94,170,0,328" />
+        <ComboBox x:Name="comboBox1" Width="147" FontSize="14" HorizontalAlignment="Left" Margin="148,133,0,390" />
+        <ComboBox x:Name="comboBox2" Width="147" FontSize="14" HorizontalAlignment="Left" Margin="148,173,0,350" />
+        <Button x:Name="button1" Width="100"  FontSize="18" Content="Поиск" HorizontalAlignment="Center"  Margin="99,230,505,283" />
+        <Button x:Name="button2" Width="100"  FontSize="18" Content="Выбрать" HorizontalAlignment="Center"  Margin="344,396,260,117" />
+        <Button x:Name="button3" Width="100"  FontSize="18" Content="Далее" HorizontalAlignment="Center"  Margin="461,396,143,117" IsEnabled="False"/>
+        <Button x:Name="button4" Width="100"  FontSize="18" Content="Отмена" HorizontalAlignment="Center"  Margin="576,396,28,117" />
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="344,133,0,0" VerticalAlignment="Top" Height="235" Width="332">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер" Binding="{Binding Path=Number}" Width="90" />
+                <DataGridHyperlinkColumn Header="Категория" Binding="{Binding Path=Category}" Width="120" />
+                <DataGridTextColumn Header="Цена" Binding="{Binding Path=Price}" Width="120" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
