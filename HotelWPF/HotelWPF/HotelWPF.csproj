@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ClientDataWindow.xaml.cs">
+      <DependentUpon>ClientDataWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RoomSearch.xaml.cs">
       <DependentUpon>RoomSearch.xaml</DependentUpon>
     </Compile>
@@ -63,6 +66,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ГостиницаDataSet.xsd</DependentUpon>
     </Compile>
+    <Page Include="ClientDataWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Main.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -137,6 +144,10 @@
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
       <Project>{73fdc676-7bd5-4bc5-a3cc-75a60bb71b39}</Project>
       <Name>Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ViewModel\ViewModel.csproj">
+      <Project>{85e6c314-791f-49ef-9620-dda02d4fc8de}</Project>
+      <Name>ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

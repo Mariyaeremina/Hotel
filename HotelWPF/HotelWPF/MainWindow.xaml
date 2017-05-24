@@ -7,12 +7,33 @@
         mc:Ignorable="d"
         Title="Вход" Height="584" Width="712"
         WindowStartupLocation ="CenterScreen">
+    
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Width" Value="220"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Height" Value="50"/>
+        </Style>
+        <Style TargetType="Control">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Width" Value="110"/>
+        </Style>
+    </Window.Resources>
+
     <Grid>
-        <Label x:Name="label1"  Height="50" FontSize="30" Content="Добро пожаловать!" HorizontalAlignment="Center"  Margin="0,0,0,230" />
-        <Label x:Name="label2"  Height="50" FontSize="18" Content="Логин:" HorizontalAlignment="Center"  Margin="0,0,270,100" />
-        <Label x:Name="label3"  Height="50" FontSize="18" Content="Пароль:" HorizontalAlignment="Center"  Margin="0,0,285,0" />
-        <TextBox x:Name="textBox1" Height="25" Width="220" FontSize="16" HorizontalAlignment="Center" Margin="85,0,0,110" />
-        <TextBox x:Name="textBox2" Height="25" Width="220"  FontSize="16" HorizontalAlignment="Center"  Margin="85,0,0,10" />
-        <Button x:Name="button" Height="35" Width="110"  FontSize="18" Content="Войти" HorizontalAlignment="Center"  Margin="0,100,0,0" />
+        <Label x:Name="label1" FontSize="30" Content="Добро пожаловать!" Margin="220,0,0,230" />
+        <Label x:Name="label2" Content="Логин:" Margin="200,0,270,100" />
+        <Label x:Name="label3" Content="Пароль:"  Margin="190,0,285,0" />
+        <TextBox x:Name="textBox1" Margin="85,0,0,110" />
+        <TextBox x:Name="textBox2" Margin="85,0,0,10" />
+        <Button x:Name="button" Content="Войти" Margin="0,100,0,0" />
     </Grid>
 </Window>

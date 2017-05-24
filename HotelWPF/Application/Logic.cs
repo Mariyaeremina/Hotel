@@ -2,6 +2,7 @@
 using Infrastructure;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -55,9 +56,9 @@ namespace ApplicationLogic
             }
         }
 
-        public static List<int> GetCapacity(string hotelCode)
+        public static ObservableCollection<int> GetCapacity(string hotelCode)
         {
-            List<int> capacities = new List<int>();
+            ObservableCollection<int> capacities = new ObservableCollection<int>();
             HotelDB db = new HotelDB();
             db.QueryExecuteReader(@"SELECT DISTINCT [Кол-во мест]
                                     FROM Номера 
@@ -71,9 +72,9 @@ namespace ApplicationLogic
             return capacities;
         }
 
-        public static List<string> GetCategory(string hotelCode)
+        public static ObservableCollection<string> GetCategory(string hotelCode)
         {
-            List<string> categories = new List<string>();
+            ObservableCollection<string> categories = new ObservableCollection<string>();
             HotelDB db = new HotelDB();
             db.QueryExecuteReader(@"SELECT DISTINCT [Категории].[Название]
                                     FROM Категории INNER JOIN Номера ON Категории.[Код категории] = Номера.[Код категории]

@@ -1,9 +1,5 @@
-﻿using ApplicationLogic;
-using Domain;
-using Infrastructure;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,20 +11,17 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using ViewModel;
 
 namespace HotelWPF
 {
     /// <summary>
-    /// Логика взаимодействия для Window1.xaml
+    /// Логика взаимодействия для ClientDataWindow.xaml
     /// </summary>
-    public partial class RoomSearch : Window
+    public partial class ClientDataWindow : Window
     {
-        public RoomSearch(string hotelCode, string registrationOrReserve)
+        public ClientDataWindow()
         {
             InitializeComponent();
-            Title = registrationOrReserve;
-            DataContext = new ApplicationViewModel(hotelCode);
         }
     }
 }

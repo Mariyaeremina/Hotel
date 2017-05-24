@@ -7,15 +7,27 @@
         mc:Ignorable="d"
         Title="Вход" Height="584" Width="712"
         WindowStartupLocation ="CenterScreen">
+
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Width" Value="110"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+    </Window.Resources>
+    
     <Grid>
         <Label x:Name="label1"  Height="40" FontSize="22" Content="Название гостиниы" HorizontalAlignment="Center"  Margin="0,0,0,400" />
         <Label x:Name="label2" FontSize="16" Content="Адрес" HorizontalAlignment="Left"  Margin="38,94,0,402" />
         <Label x:Name="label3"  Height="40" FontSize="16" Content="Телефон" HorizontalAlignment="Left"  Margin="38,129,0,384" />
-        <Button x:Name="button1" Height="35" Width="110"  FontSize="18" Content="Регистрация" HorizontalAlignment="Center"  Margin="14,414,580,104" Background="White" BorderThickness="0" />
-        <Button x:Name="button2" Height="35" Width="110"  FontSize="18" Content="Выбытие" HorizontalAlignment="Center"  Margin="124,414,470,104" Background="White" BorderThickness="0"/>
-        <Button x:Name="button3" Height="35" Width="140"  FontSize="18" Content="Бронирование" HorizontalAlignment="Center"  Margin="234,414,330,104" Background="White" BorderThickness="0"/>
-        <Button x:Name="button4" Height="35" Width="110"  FontSize="18" Content="Оплата" HorizontalAlignment="Center"  Margin="374,414,220,104" Background="White" BorderThickness="0"/>
-        <Button x:Name="button5" Height="35" Width="110"  FontSize="18" Content="Поиск" HorizontalAlignment="Center"  Margin="484,414,110,104" Background="White" BorderThickness="0"/>
-        <Button x:Name="button6" Height="35" Width="110"  FontSize="18" Content="Выход"  HorizontalAlignment="Center"  Margin="594,414,0,104" Background="White" BorderThickness="0"/>
+        <Button x:Name="button1" Content="Регистрация" Margin="14,414,580,104"/>
+        <Button x:Name="button2" Content="Выбытие" Margin="124,414,470,104"/>
+        <Button x:Name="button3" Width="140" Content="Бронирование" Margin="234,414,330,104" />
+        <Button x:Name="button4" Content="Оплата" Margin="374,414,220,104"/>
+        <Button x:Name="button5" Content="Поиск" Margin="484,414,110,104"/>
+        <Button x:Name="button6" Content="Выход"  Margin="594,414,0,104"/>
     </Grid>
 </Window>
