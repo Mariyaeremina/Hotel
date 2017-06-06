@@ -21,9 +21,9 @@ namespace ApplicationLogic
                                   "where [Код гостиницы] = " + Convert.ToInt32(hotelCode));
             if (db.reader.Read())
             {
-                hotel.Adress = db.reader["Адрес"].ToString();
-                hotel.Phone = db.reader["Телефон"].ToString();
-                hotel.Name = db.reader["Название"].ToString();
+                hotel.address = db.reader["Адрес"].ToString();
+                hotel.phone = db.reader["Телефон"].ToString();
+                hotel.name = db.reader["Название"].ToString();
                 db.CloseConnection();
                 return hotel;
             }

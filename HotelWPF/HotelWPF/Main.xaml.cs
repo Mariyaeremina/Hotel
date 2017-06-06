@@ -27,9 +27,9 @@ namespace HotelWPF
             
             Hotel hotel = new Hotel();
             hotel = Logic.GetHotel(hotelCode);
-            label1.Content = hotel.Name;
-            label2.Content = hotel.Adress;
-            label3.Content = hotel.Phone;
+            label1.Content = hotel.name;
+            label2.Content = hotel.address;
+            label3.Content = hotel.phone;
 
             button1.Click += (sender, args) =>
             {

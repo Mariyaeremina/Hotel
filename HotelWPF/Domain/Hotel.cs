@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class Hotel
+    public partial class Hotel
     {
-        public string Name;
-        public string Adress;
-        public string Phone;
+        public int id_hotel { get; set; }
+        public string name { get; set; }
+        public string address { get; set; }
+        public string phone { get; set; }
+        public string city { get; set; }
+        public string Поле1 { get; set; }
     }
 }
