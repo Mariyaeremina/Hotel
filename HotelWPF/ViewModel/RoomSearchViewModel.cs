@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace ViewModel
 {
-    public class ApplicationViewModel : INotifyPropertyChanged
+    public class RoomSearchViewModel : INotifyPropertyChanged
     {
         private int selectedCapacity;
         private string selectedCategory;
@@ -113,7 +113,7 @@ namespace ViewModel
             }
         }
         
-        public ApplicationViewModel(string hotelCode)
+        public RoomSearchViewModel(string hotelCode)
         {
             Capacities = new ObservableCollection<int>();
             Categories = new ObservableCollection<string>();

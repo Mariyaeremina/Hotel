@@ -28,7 +28,7 @@ namespace HotelWPF
         {
             InitializeComponent();
             Title = registrationOrReserve;
-            DataContext = new ApplicationViewModel(hotelCode);
+            DataContext = new RoomSearchViewModel(hotelCode);
         }
     }
 }
